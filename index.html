@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleGate</title>
+
+    <!-- #################################### PAGE ICON #################################### -->
+
+    <link rel="icon" href="images/logo.png" />
+
+    <!-- #################################### CSS #################################### -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- #################################### BOOTSTRAP #################################### -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- #################################### ICONS #################################### -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- #################################### FONTS #################################### -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Sometype+Mono:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .accordion-button:not(.collapsed) {
+        color: #fff;
+        background-color: rgb(16, 16, 16);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- #################################### PAGE #################################### -->
+
+    <div class="page">
+      <!-- #################################### NAVBAR #################################### -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark px-4 px-sm-5">
+        <div class="container-fluid pt-4">
+          <a class="navbar-brand" href="#">
+            <div class="navbar-logo">
+              <img src="/images/simple_gate_logo.svg" alt="logo" />
+            </div>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex text-center mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span class="pill-link">About us</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span class="pill-link">States</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><span class="pill-link">Contact us</span></a
+                >
+              </li>
+            </ul>
+
+            <ul class="navbar-nav language-switch">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="languageSwitchButton"
+                  onclick="toggleLanguage()"
+                >
+                  <span
+                    id="currentLanguageFlag"
+                    class="language"
+                    data-language="english"
+                  >
+                    <img src="/images/english.png" alt="" /><span>English</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav ms-2">
+              <li class="nav-item">
+                <button class="nav-link" id="signIn-button" href="#">
+                  Sign In / Register
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- #################################### HEADER #################################### -->
+
+      <header class="mb-5">
+        <div class="header-container">
+          <div
+            class="header-bottom d-lg-none col-12 d-flex flex-column align-items-center"
+          >
+            <div class="d-flex align-items-center header-text logo-img">
+              <img src="/images/simple_gate_logo.svg" alt="logo" />
+            </div>
+            <button
+              class="btn btn-sm btn-primary mt-5 header-text"
+              id="learn-button"
+              href="#"
+            >
+              Learn more
+            </button>
+          </div>
+          <div class="header-container-text d-none d-lg-flex flex-column">
+            <div class="d-inline-flex align-items-center header-text text-size">
+              <img src="images/paragraph.svg" class="me-3" alt="paragraph" />
+              <p>We will find you a job in the European Union</p>
+            </div>
+            <div class="d-inline-flex align-items-center header-text text-size">
+              <img src="images/paragraph.svg" class="me-3" alt="paragraph" />
+              <p>We will help you arrange a work permit</p>
+            </div>
+            <div class="d-inline-flex align-items-center header-text text-size">
+              <img src="images/paragraph.svg" class="me-3" alt="paragraph" />
+              <p>We will find accommodation</p>
+            </div>
+            <div class="d-inline-flex align-items-center header-text text-size">
+              <img src="images/paragraph.svg" class="me-3" alt="paragraph" />
+              <p>And much more ...</p>
+            </div>
+
+            <button class="mt-3 header-text" id="learn-button" href="#">
+              Learn more
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- #################################### CHOICE SIMPLE GATE #################################### -->
+
+      <section class="choice-simple-gate">
+        <h3
+          class="text-center display-6 m-sm-2 m-md-5 choice-simple-gate-title"
+        >
+          Why Choose SimpleGate?
+        </h3>
+        <div class="container mt-5">
+          <div class="row px-4 mb-5">
+            <div class="choice-box choice-box-1 clo-12 col-lg-4 p-4">
+              <i class="far fa-list-alt display-6 mb-3"></i>
+              <h4>Personalized Matches:</h4>
+              <p>
+                We use advanced algorithms to match zou with the bestjon
+                position in the EU.
+              </p>
+            </div>
+            <div
+              class="choice-box choice-box-2 clo-12 text-end text-lg-start col-lg-4 p-4"
+            >
+              <i class="fas fa-briefcase display-6 mb-3"></i>
+              <h4>Trusted by Thousands:</h4>
+              <p>
+                Over 15,000 job seekers have found their dream jobs with us.
+              </p>
+            </div>
+            <div class="choice-box choice-box-3 clo-12 col-lg-4 p-4">
+              <i class="fas fa-globe-americas display-6 mb-3"></i>
+              <h4>Deep Connections:</h4>
+              <p>
+                Leverage our network of tens ouf thousands of employers across
+                Europe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- #################################### HOW WORKS #################################### -->
+
+      <section
+        class="how-works d-flex flex-column flex-xl-row justify-content-evenly align-items-center"
+      >
+        <div
+          class="how-works-box how-works-box-1 left-box d-flex flex-column justify-content-center px-4"
+        >
+          <h3 class="display-6">How It Work?</h3>
+          <p>
+            here you will see several advantages that the SimpleGate system and
+            web portal has over the competition
+          </p>
+          <button class="mt-3" id="signIn-button">
+            Discover more about SimpleGate
+          </button>
+        </div>
+        <div
+          class="how-works-box how-works-box-2 right-box d-flex flex-column justify-content-center px-5"
+        >
+          <div class="d-flex">
+            <span class="display-6 me-2 me-sm-5 fw-bolder">01</span>
+            <div class="d-flex flex-column justify-content-end">
+              <h4>Register</h4>
+              <p>Quick and easy sign-up process</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <span class="display-6 me-2 me-sm-5 fw-bolder">02</span>
+            <div class="d-flex flex-column justify-content-end">
+              <h4>Verify & Pay fro Registration</h4>
+              <p>Confirm your email and unlock premium features</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <span class="display-6 me-2 me-sm-5 fw-bolder">03</span>
+            <div class="d-flex flex-column justify-content-end">
+              <h4>Complete the Form</h4>
+              <p>Share your qualifications and preferences</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <span class="display-6 me-2 me-sm-5 fw-bolder">04</span>
+            <div class="d-flex flex-column justify-content-end">
+              <h4>We Will Find You the Perfect Match</h4>
+              <p>We'll search for the best opportunities for you</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- #################################### CAROUSEL #################################### -->
+
+      <section
+        class="seekers-box d-none d-md-block container d-flex flex-column pt-5"
+      >
+        <h3 class="display-5 text-center mt-5">
+          Hear from Our Satisfied Job Seekers
+        </h3>
+        <div class="seekers row">
+          <div class="seekers-container col-4 col-lg-7 col-xl-9">
+            <div
+              class="seekers-item seekers-item-1 picture picture-one d-flex flex-column justify-content-end pb-3 ps-4"
+              data-index="1"
+            >
+              <h6 class="fs-6">John</h6>
+              <p>
+                "I heard about this company only best referencies. Now i work in
+                my favourite country in Europe"
+              </p>
+            </div>
+            <div
+              class="seekers-item seekers-item-2 picture picture-two d-flex flex-column justify-content-end pb-3 ps-4"
+              data-index="2"
+            >
+              <h6 class="fs-6">Wong Li</h6>
+              <p>"Joining this team has been a game-changer for me"</p>
+            </div>
+            <div
+              class="seekers-item seekers-item-3 picture picture-three d-flex flex-column justify-content-end pb-3 ps-4"
+              data-index="3"
+            >
+              <h6 class="fs-6">Thomas</h6>
+              <p>
+                "I discovered this fantastic opportunity through glowing
+                recommendations"
+              </p>
+            </div>
+            <div
+              class="seekers-item seekers-item-4 picture picture-four d-flex flex-column justify-content-end pb-3 ps-4"
+              data-index="4"
+            >
+              <h6 class="fs-6">Olivia</h6>
+              <p>"Loving my new job – great team, exciting challenges!"</p>
+            </div>
+            <div
+              class="seekers-item seekers-item-5 picture picture-five d-flex flex-column justify-content-end pb-3 ps-4"
+              data-index="5"
+            >
+              <h6 class="fs-6">Willima</h6>
+              <p>
+                "Grateful for the opportunity to grow and contribute in such an
+                inspiring workplace!"
+              </p>
+            </div>
+          </div>
+          <div class="seekers-controls"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- #################################### REGISTER NOW #################################### -->
+
+    <div class="register-now"></div>
+    <img class="transparent-image" src="images/transparent_text.png" />
+    <div class="page">
+      <div
+        class="register-box d-flex flex-column text-center align-items-center"
+      >
+        <h3 class="register-title">Join SimpleGate today!</h3>
+        <button class="my-3 px-5 fw-normal btn btn-lg" id="signIn-button">
+          Register Now!
+        </button>
+      </div>
+
+      <!-- #################################### QUESTIONS #################################### -->
+
+      <section
+        class="questions d-flex align-items-start justify-content-end px-5"
+      >
+        <div class="container">
+          <div class="row col-12">
+            <h3 class="pb-4 fs-1">Got Questions?</h3>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed border-top"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    How long does it take to find a job through SimpleGate?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    The duration to secure a job depends on various factors,
+                    including your qualifications, preferences, and current
+                    market opportunities. However, our aim is to match you with
+                    the most suitable position as swifty as possible. Thanks to
+                    our advanced algorithms and extensive contact network, we
+                    can expedite the process considerably.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    What is the fee for registering in the SimpleGate database?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    The registration fee is 10 EUR and not only includes access
+                    tou our database but also personalized job search services
+                    and other exclusive benefits.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Can I edit my profile and information after registration?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Absolutely! Once you've completed the registration process,
+                    you have the convenience of making changes and updates to
+                    your profile and information at any time to ensure it
+                    reflects your current skills and experiences.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    What if I'm not satisfied with the job offer?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    If you're not satisfied with the job offer, you can explore
+                    other opportunities on our platform or contact our support
+                    team for assistance in finding a more suitable match for
+                    your preferences and skills.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed border-bottom"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    What are the other benefits of registering in the SimpleGate
+                    database?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Registering with SimpleGate provides numerous benefits,
+                    including access to a wide range of job opportunities,
+                    personalized job alerts, and the ability to showcase your
+                    skills and experience to potential employers. Additionally,
+                    you can network with professionals in your industry, stay
+                    updated on market trends, and receive valuable
+                    career-related resources and advice.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- #################################### FOOTER #################################### -->
+
+      <footer>
+        <div class="container pb-5">
+          <div
+            class="row d-flex justify-content-center flex-column flex-lg-row align-items-lg-start align-items-center"
+          >
+            <div
+              class="col-2 mt-4 d-flex flex-column align-items-center d-flex justify-content-center"
+            >
+              <div class="footer-logo pb-4 d-flex align-items-center">
+                <img src="/images/simple_gate_logo_white.svg" alt="logo" />
+              </div>
+            </div>
+            <div
+              class="col-2 mt-4 d-flex flex-column align-items-center align-items-lg-start"
+            >
+              <p class="footer-titels">Navigation</p>
+              <a href="#">
+                <p class="footer-text-min-width">About us</p>
+              </a>
+              <a href="#">
+                <p class="footer-text-min-width">States</p>
+              </a>
+              <a href="#">
+                <p class="footer-text-min-width">Contact us</p>
+              </a>
+            </div>
+            <div
+              class="col-2 mt-4 d-flex flex-column align-items-center align-items-lg-start"
+            >
+              <p class="footer-titels">Login</p>
+              <a href="#">
+                <p class="footer-text-min-width">Sign in</p>
+              </a>
+              <a href="#">
+                <p class="footer-text-min-width">Registration</p>
+              </a>
+              <a href="#">
+                <p class="footer-text-min-width">Forgotten password</p>
+              </a>
+            </div>
+            <div
+              class="col-2 mt-4 d-flex flex-column align-items-center align-items-lg-start"
+            >
+              <p class="footer-titels">Contact</p>
+              <a href="#">
+                <p class="footer-text-min-width">SimpleGate s.r.o.</p>
+              </a>
+              <a href="#">
+                <p class="footer-text-min-width">info@simplegate.com</p>
+              </a>
+              <a href="#">
+                <p class="footer-text-min-width">+420 715 123 463</p>
+              </a>
+            </div>
+            <div
+              class="col-2 mt-4 d-flex flex-column align-items-center align-items-lg-start"
+            >
+              <p class="footer-titels">Regulation</p>
+              <a href="#">
+                <p class="footer-text-min-width">VOP</p>
+              </a>
+              <a href="#">
+                <p class="footer-text-min-width">GDPR</p>
+              </a>
+              <a href="#">
+                <p class="footer-text-min-width">CZ-ISCO</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- #################################### GSAP #################################### -->
+
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/scrolltrigger-scss@1.0.6/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- #################################### BOOTSTRAP #################################### -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- #################################### jQUERY #################################### -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- #################################### JAVASCRIPT #################################### -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
