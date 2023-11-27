@@ -10,11 +10,14 @@
     font-family: 'Roboto', sans-serif;
     background-color: #141414;
     z-index: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 section h3{
     color: #FFFFFF;
     font-family: 'Kanit', sans-serif;
+    font-size: 40pt;
 }
 
 /* #################################### NAVBAR #################################### */
@@ -247,6 +250,30 @@ header {
 
 .how-works-box span{
     font-family: 'Bebas Neue', sans-serif;
+}
+
+/* #################################### CAROUSEL #################################### */
+
+.gradient-right{
+    background: rgb(0,122,252);
+    background: radial-gradient(circle, rgba(0,122,252,0.2539390756302521) 0%, rgba(255,255,255,0) 31%);
+    position: absolute;
+    z-index: 4;
+    top: -300px;
+    right: -700px;
+    height: 3000px;
+    width: 1000px;
+}
+
+.gradient-left{
+    background: rgb(0,122,252);
+    background: radial-gradient(circle, rgba(0,122,252,0.2539390756302521) 0%, rgba(255,255,255,0) 31%);
+    position: absolute;
+    z-index: 4;
+    left: -600px;
+    height: 2000px;
+    width: 1000px;
+
 }
 
 /* #################################### CAROUSEL #################################### */
@@ -531,7 +558,27 @@ footer a{
 
 /* #################################### MEDIA QUERY #################################### */
 
+@media (min-width: 300px) {
+
+    section h3{
+        font-size: 17pt;
+    }
+
+    .gradient-left{
+        top: 1600px;
+    }
+
+    .gradient-right{
+        top: 200px;
+        right: -800px;
+    }
+}
+
 @media (max-width: 300px) {
+
+    section h3{
+        font-size: 17pt;
+    }
 
     #learn-button{
        width: 130px;
@@ -545,6 +592,13 @@ footer a{
     .left-box p{
         max-width: 150px;
         font-size: small;
+    }
+}
+
+@media (min-width: 400px) {
+
+    section h3{
+        font-size: 22pt;
     }
 }
 
@@ -562,7 +616,7 @@ footer a{
 
     .left-box #signIn-button{
         max-width: 240px;
-        font-size: 6px;
+        font-size: 12px;
         height: 50px;
         border-radius: 30px;
     }
@@ -585,12 +639,66 @@ footer a{
         font-size: small;
     }
 
+    .register-title{
+        font-size: 19px;
+    }
+
+    .register-box #signIn-button{
+        height: 45px;
+    }
+
     footer{
         padding-top: 200px;
     }
 }
 
-  @media (max-width: 992px) {
+@media (min-width: 500px) {
+    section h3{
+        font-size: 30pt;
+    }
+
+    .left-box #signIn-button{
+        width: 350px;
+        font-size: 15px;
+        height: 50px;
+        border-radius: 30px;
+    }
+
+    .left-box p{
+        width: 400px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 700px) {
+
+    .left-box #signIn-button{
+        width: 450px;
+        font-size: 16px;
+        height: 50px;
+        border-radius: 30px;
+    }
+
+    .left-box p{
+        width: 550px;
+        font-size: 18px;
+    }
+
+    .right-box p{
+        font-size: 13pt;
+        margin-bottom: 44pt;
+    }
+
+    .right-box h4{
+        font-size: 13pt;
+    }
+
+    .right-box span{
+        font-size: 29pt;
+    }
+}
+
+@media (max-width: 992px) {
 
     .navbar.navbar-dark.collapsed-bg {
         background: linear-gradient(rgb(14, 36, 68), rgb(8, 18, 31));
@@ -617,29 +725,10 @@ footer a{
         padding: 15px;
     }
     
-    .left-box #signIn-button{
-        width: 350px;
-        font-size: 12px;
-        height: 50px;
-        border-radius: 30px;
-    }
-    
-    .left-box p{
-        width: 450px;
-        font-size: small;
-    }
 
     .footer-text-min-width{
         min-width: 150px;
         text-align: center;
-    }
-
-    .right-box p{
-        font-size: small;
-    }
-
-    .right-box h4{
-        font-size: medium;
     }
 
     .footer-titels{
@@ -654,6 +743,14 @@ footer a{
 
 @media (min-width: 992px) {
 
+    .gradient-left{
+        top: 1300px;
+    }
+
+    .gradient-right{
+        top: -300px;
+    }
+
     .text-size{
         font-size: 20px;
     }
@@ -663,7 +760,6 @@ footer a{
         font-size: 14px;
         height: 70px;
         border-radius: 40px;
-
     }
 
     .header-container-text img{
@@ -671,23 +767,28 @@ footer a{
     }
 
     .left-box #signIn-button{
-        width: 350px;
-        font-size: 12px;
+        width: 450px;
+        font-size: 16px;
         height: 50px;
         border-radius: 30px;
     }
 
     .left-box p{
-        width: 450px;
-        font-size: small;
+        width: 550px;
+        font-size: 18px;
     }
 
     .right-box p{
-        font-size: small;
+        font-size: 16pt;
+        margin-bottom: 44pt;
     }
 
     .right-box h4{
-        font-size: medium;
+        font-size: 16pt;
+    }
+
+    .right-box span{
+        font-size: 38pt;
     }
 
     .footer-titels{
@@ -705,7 +806,44 @@ footer a{
 
 }
 
+
  @media (min-width: 1200px) {
+    .gradient-left{
+        top: 850px;
+    }
+
+    .choice-box h4{
+        font-size: 16pt;
+    }
+    
+    .choice-box p{
+        font-size: 12pt;
+    }
+
+    .left-box #signIn-button{
+        width: 300pt;
+        font-size: 12pt;
+        height: 40pt;
+        border-radius: 50px;
+    }
+
+    .left-box p{
+        width: 350pt;
+        font-size: 12pt;
+    }
+
+    .right-box p{
+        font-size: 16pt;
+        margin-bottom: 44pt;
+    }
+
+    .right-box h4{
+        font-size: 16pt;
+    }
+
+    .right-box span{
+        font-size: 38pt;
+    }
 
     .text-size{
         font-size: 27px;
@@ -719,6 +857,17 @@ footer a{
 
     .header-container-text img{
         height: 20px;
+    }
+
+    .register-box h3{
+        font-size: 26pt;
+    }
+
+    .register-box #signIn-button{
+        width: 200pt;
+        height: 47pt;
+        font-size: 15pt;
+        border-radius: 70px;
     }
 
     .footer-titels{
@@ -740,8 +889,111 @@ footer a{
         width: 270px;
     }
 
+    .left-box #signIn-button{
+        width: 450px;
+        font-size: 16px;
+        height: 50px;
+        border-radius: 30px;
+    }
+
+    .left-box p{
+        width: 550px;
+        font-size: 18px;
+    }
+
+    .right-box p{
+        font-size: 18pt;
+        margin-bottom: 44pt;
+    }
+
+    .right-box h4{
+        font-size: 18pt;
+        margin-bottom: 8pt;
+    }
+
+    .right-box span{
+        font-size: 38pt;
+        margin-right: 20pt;
+    }
+
 }
 
+@media (min-width: 1680px) {
+
+    section h3{
+        font-size: 40pt;
+    }
+
+    .navbar-logo img{
+        width: 190pt;
+        height: 38pt;
+    }
+
+    .gradient-left{
+        top: 1400px;
+    }
+
+    .gradient-right{
+        top: -300px;
+    }
+
+    .how-works{
+        min-height: 1200px;
+    }
+
+    .choice-box h4{
+        font-size: 22pt;
+    }
+    
+    .choice-box p{
+        font-size: 18pt;
+        width: 400px;
+    }
+
+    .left-box #signIn-button{
+        width: 378pt;
+        font-size: 18pt;
+        height: 63pt;
+        border-radius: 50px;
+    }
+
+    .left-box p{
+        width: 530pt;
+        font-size: 18pt;
+    }
+
+    .right-box p{
+        font-size: 22pt;
+        height: 17pt;
+        margin-bottom: 44pt;
+    }
+
+    .right-box h4{
+        font-size: 22pt;
+        width: 402pt;
+        height: 22pt;
+        margin-bottom: 16pt;
+    }
+
+    .right-box span{
+        font-size: 48pt;
+        width: 54pt;
+        height: 57pt;
+        margin-right: 20pt;
+    }
+
+    .register-box h3{
+        font-size: 30pt;
+    }
+
+    .register-box #signIn-button{
+        width: 244pt;
+        height: 63pt;
+        font-size: 16pt;
+        border-radius: 70px;
+    }
+
+}
   
 @media (min-width: 1700px) { 
     
